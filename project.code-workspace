@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../food/css"
+		},
+		{
+			"path": "../../food/images"
+		},
+		{
+			"path": "../../food/js"
+		},
+		{
+			"path": "../../food/templates"
+		},
+		{
+			"path": "../../food/videos"
+		},
+		{
+			"path": "../../food/static"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "css"
+	}
+}

@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>MoobiQ Dashboard</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+:root{
+
+--bg:#02184a;
+--card:#004cff;
+--card2:#0587ff;
+--text:#ffffff;
+--shadow:rgba(0,0,0,.2);
+
+}
+
+body.light{
+
+--bg:#f5f7fc;
+--card:#ffffff;
+--card2:#e8f1ff;
+--text:#0d1b3f;
+--shadow:rgba(0,0,0,.1);
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+
+background:var(--bg);
+min-height:100vh;
+padding:30px;
+transition:.3s;
+}
+
+.container{
+max-width:1400px;
+margin:auto;
+}
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:40px;
+}
+
+.left-header{
+
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.logo-space{
+
+width:90px;
+height:90px;
+border: 3px solid royalblue;
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:40px;
+font-weight: bolder;
+color:var(--text);
+}
+
+.title h1{
+
+font-size:60px;
+color:var(--text);
+}
+
+.title p{
+
+font-size:20px;
+color:var(--text);
+}
+
+.right-header{
+
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.toggle{
+    width:60px;
+    height:30px;
+    background:#fff;
+    border-radius:50px;
+    cursor:pointer;
+    position:relative;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.circle{
+    position:absolute;
+    top:3px;
+    left:3px;
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background:#004cff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    transition:all .35s ease;
+    font-size:13px;
+}
+
+body.light .circle{
+    left:33px;
+    background:#f4b400;
+    color:#fff;
+}
+.user-box{
+
+position:relative;
+
+color: #ffffff;
+}
+
+.user-icon{
+
+cursor:pointer;
+
+font-size:34px;
+color: royalblue;
+}
+
+.dropdown{
+
+position:absolute;
+
+top:60px;
+
+right:0;
+
+width:220px;
+
+background:#02184a;
+
+color:white;
+
+border-radius:12px;
+
+overflow:hidden;
+
+display:none;
+
+z-index:999;
+
+box-shadow:0 8px 30px rgba(0,0,0,.3);
+
+}
+
+.dropdown a{
+
+display:block;
+
+padding:16px;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+}
+
+.dropdown a:hover{
+
+background:blue;
+
+}
+.dropdown a i{
+    width:22px;
+    margin-right:10px;
+    text-align:center;
+}
+
+.show{
+
+display:block;
+
+}
+.dashboard{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(240px,1fr));
+
+gap:20px;
+}
+
+.card{
+
+height:200px;
+
+perspective:1000px;
+}
+
+.inner{
+
+position:relative;
+
+width:100%;
+height:100%;
+
+transform-style:preserve-3d;
+
+transition:0.8s;
+}
+
+.card:hover .inner{
+
+transform:rotateY(180deg);
+}
+
+.front,
+.back{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+backface-visibility:hidden;
+
+border-radius:15px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 10px 30px var(--shadow);
+
+padding:20px;
+}
+
+.front{
+
+background:
+linear-gradient(
+135deg,
+var(--card),
+var(--card2)
+);
+
+color:var(--text);
+}
+
+.front i{
+
+font-size:60px;
+margin-bottom:20px;
+}
+
+.front h2{
+
+text-align:center;
+}
+
+.back{
+
+transform:rotateY(180deg);
+
+background:#0d1b3f;
+
+color:white;
+}
+
+.back a{
+
+text-decoration:none;
+
+background:white;
+
+padding:12px 25px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+color:#004cff;
+}
+
+.footer{ 
+margin-top:50px; 
+padding:25px 20px; 
+border-top:1px solid rgba(255,255,255,.15); 
+}
+.footer-content{ 
+display:flex; 
+justify-content:space-between; 
+align-items:center; 
+flex-wrap:wrap; 
+gap:15px; 
+color:var(--text); 
+}
+.footer p{ 
+font-size:15px; 
+font-weight:600; 
+}
+.social-icons{ 
+display:flex; 
+gap:15px; 
+}
+.social-icons a{
+width:40px;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:linear-gradient(135deg,var(--card),var(--card2));
+color:rgb(25, 40, 85);
+text-decoration:none;
+font-size:18px;
+transition:.3s ease;
+}
+.social-icons a:hover{
+transform:translateY(-4px) scale(1.08);
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+
+@media(max-width:768px){
+
+.title h1{
+
+font-size:40px;
+}
+.footer-content{ 
+
+flex-direction:column;
+text-align:center;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<div class="left-header">
+
+<div class="logo-space">
+<i class="fa-solid fa-globe"></i>
+</div>
+
+<div class="title">
+
+<h1>MoobiQ</h1>
+
+<p>Empowering People. Building Prosperity.</p>
+
+</div>
+
+</div>
+
+<div class="right-header">
+
+<div class="toggle" onclick="mode()">
+    <div class="circle">
+        <i class="fa-solid fa-moon"></i>
+    </div>
+</div>
+
+</div>
+
+<div class="user-box">
+
+<div class="user-icon">
+
+<i class="fa-solid fa-circle-user"></i>
+
+</div>
+
+<div class="dropdown">
+
+<a href="#"><i class="fa-solid fa-circle-info"></i> About Us</a>
+
+<a href="#"><i class="fa-solid fa-envelope"></i> Contact</a>
+
+<a href="#"><i class="fa-solid fa-briefcase"></i> Services</a>
+
+<a href="#"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="dashboard">
+
+<!-- CARD 1 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-users"></i>
+
+<h2>MoobiQ Community</h2>
+
+</div>
+
+<div class="back">
+
+<h3>Open Community</h3>
+
+<br>
+
+<a href="https://Community.moobiq.com">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARD 2 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-desktop"></i>
+
+<h2>MoobiQ Computer Education</h2>
+
+</div>
+
+<div class="back">
+
+<h3>Open Education</h3>
+
+<br>
+
+<a href="https://Education.moobiq.com">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARD 3 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<h2>MoobiQ Resource Bank</h2>
+
+</div>
+
+<div class="back">
+
+<h3>Open Resources</h3>
+
+<br>
+
+<a href="https://Exchange.moobiq.com">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARD 4 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h2>MoobiQ Investment Center</h2>
+
+</div>
+
+<div class="back">
+
+<h3>Open Investments</h3>
+
+<br>
+
+<a href="https://Investment.moobiq.com">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARD 5 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-screwdriver-wrench"></i>
+
+<h2>MoobiQ Skills Acquisition</h2>
+
+</div>
+
+<div class="back">
+
+<h3>Learn Skills</h3>
+
+<br>
+
+<a href="https://Skills.moobiq.com">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARD 6 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-solar-panel"></i>
+
+<h2>MoobiQ Renewable Energy</h2>
+
+</div>
+
+<div class="back">
+
+<h3>Open Energy</h3>
+
+<br>
+
+<a href="https://Energy.moobiq.com">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARD 7 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-briefcase"></i>
+
+<h2>MoobiQ Remote Jobs</h2>
+
+</div>
+
+<div class="back">
+
+<h3>Find Jobs</h3>
+
+<br>
+
+<a href="https://Jobs.moobiq.com">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARD 8 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-headset"></i>
+
+<h2>MoobiQ Business Support</h2>
+
+</div>
+
+<div class="back">
+
+<h3>Get Support</h3>
+
+<br>
+
+<a href="https://SME.moobiq.com">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARD 9 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h2>MoobiQ Digital Assets</h2>
+
+</div>
+
+<div class="back">
+
+<h3>Manage Assets</h3>
+
+<br>
+
+<a href="https://Banks.moobiq.com">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARD 10 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-server"></i>
+
+<h2>MoobiQ SME Web Hosting</h2>
+
+</div>
+
+<div class="back">
+
+<h3>Host Website</h3>
+
+<br>
+
+<a href="https://Smehost.moobiq.com">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARD 11 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-people-roof"></i>
+
+<h2>MoobiQ Family</h2>
+
+</div>
+
+<div class="back">
+
+<h3>Family Hub</h3>
+
+<br>
+
+<a href="https://Families.moobiq.com">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CARD 12 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-user-plus"></i>
+
+<h2>Register</h2>
+
+</div>
+
+<div class="back">
+
+<h3>Create Account</h3>
+
+<br>
+
+<a href="https://register.html">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 13 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-newspaper"></i>
+
+<h2>MoobiQ NEWS</h2>
+
+</div>
+
+<div class="back">
+
+<h3>View NEWS</h3>
+
+<br>
+
+<a href="https://register.html">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 14 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-credit-card"></i>
+
+<h2>MoobiQ Credit</h2>
+
+</div>
+
+<div class="back">
+
+<h3>Open MoobiQ Credit</h3>
+
+<br>
+
+<a href="https://register.html">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 14 -->
+
+<div class="card">
+
+<div class="inner">
+
+<div class="front">
+
+<i class="fa-solid fa-user-tie"></i>
+
+<h2>MoobiQ Recruite</h2>
+
+</div>
+
+<div class="back">
+
+<h3>Apply for Recruitment</h3>
+
+<br>
+
+<a href="https://register.html">
+
+Visit
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+<footer class="footer"> <div class="footer-content"> <p><i class="fa-regular fa-copyright"></i> 2026 MoobiQ. All Rights Reserved</p> <div class="social-icons"> <a href="#"><i class="fa-brands fa-facebook-f"></i></a> <a href="#"><i class="fa-brands fa-x-twitter"></i></a> <a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i class="fa-brands fa-linkedin-in"></i></a> <a href="#"><i class="fa-brands fa-youtube"></i></a> </div> </div> </footer>
+
+</div>
+
+<script>
+
+const userIcon=document.querySelector(".user-icon");
+
+const dropdown=document.querySelector(".dropdown");
+
+userIcon.onclick=()=>{
+
+dropdown.classList.toggle("show");
+
+};
+
+window.onclick=(e)=>{
+
+if(!e.target.closest(".user-box")){
+
+dropdown.classList.remove("show");
+
+}
+
+};
+
+function mode(){
+
+    document.body.classList.toggle("light");
+
+    const icon = document.querySelector(".circle i");
+
+    if(document.body.classList.contains("light")){
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+    }else{
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+    }
+
+}
+
+</script>
+
+</body>
+</html>
