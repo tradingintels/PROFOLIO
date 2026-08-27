@@ -1,0 +1,364 @@
+body{
+    margin: -1px;
+}
+#Gen-con{
+    width: 1330px;
+}
+header{
+    background-color: blue;
+    display: flex;
+    padding: 10px;
+    gap: 40px;
+    width: 1330px;
+}
+.i{
+    width: 200px;
+}
+nav{
+    border: 1px solid white;
+    width: 1000px;
+    padding: 25px;
+    margin: 20px;
+    font-size: 20px;
+    align-self: center;
+}
+a{
+    text-decoration: none;
+    padding: 30px;
+    color: white;
+}
+
+#Intro{
+    background-color: lightblue;
+    padding: 20px;
+    display: flex;
+    width: 1310px;
+    gap: 20px;
+}
+.pic1{
+    width: 800px;
+    height: 400px;
+    margin-left: 20px;
+    
+}
+.texts1{
+    margin-left: 10px;
+    margin-top: -40px;
+}
+h2{
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+}
+p{
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+.B1{
+    color: lightblue;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+h3{
+    text-align: center;
+    color: blue;
+    font-size: 50px;
+    width: 1330px;
+}
+.Courses{
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    width: 1330px;
+}
+ul{
+    border: 1px solid blue;
+    width: 200px;
+    padding-right: 100px;
+    padding-bottom: 150px;
+    padding-left: -10px;
+}
+li{
+    font-size: 20px;
+}
+.B2{
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    width: fit-content;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+#web{
+    background-color: lightblue;
+    display: flex;
+    width: 1350px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.pic2{
+    width: 600px;
+    height: 300px;
+    margin-left: 15px;
+}
+h4{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+} 
+.design{
+    margin-left: 120px;
+    margin-top: 60px;
+}
+.b3{
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+    background-color: lightblue;
+    border-radius: 5px;
+    margin-left: 160px;
+}
+footer{
+    background-color: black;
+    height: fit-content;
+    color: white;
+    font-size: xx-large;
+    text-align:center;
+    width: 1350px;
+}
+h5{
+    padding-bottom: 20px;
+}
+
+#about-us{
+    width: 1350px;
+}
+h6{
+    color: white;
+    background-image: url(Capture-2.PNG);
+    background-position:5px;
+    background-size: cover;
+    font-size: 60px;
+    text-align: center;
+    padding: 200px;
+    margin: 0px;
+}
+.aboutus{
+    display: flex;
+    margin-top: 10px;
+    gap: 20px;
+    border: 1px solid blue;
+    margin-bottom: 10px;
+}
+.pic4{
+    width: 800px;
+    height: 600px;
+    margin-top: 20px;
+}
+.texts2{
+    color: blue;
+    margin-bottom: 0px;
+}
+.about{
+    margin-top: 10px;
+    padding-top: 80px;
+    width: 1350px;
+    height: 100px;
+}
+
+#courses{
+    width: 1350px;
+}
+.courses{
+    color: white;
+    background-image: url(Capture-3.PNG);
+    background-size:1350px 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 60px;
+    text-align: center;
+    padding: 150px;
+    margin:0px;
+}
+.Courses{
+    width: 1350px;
+}
+.cc1{
+    text-align: center;
+    color: blue;
+    font-size: 50px;
+    width: 1265px;
+}
+.cc2{
+    margin-top: 100px;
+    padding-top: 90px;
+    width: 1350px;
+    height: 100px;
+}
+
+#App-gen{
+    background-image:
+    linear-gradient(rgba(6, 17, 172, 0.6), rgba(0,0,0,0.6)),
+    url(Capture-5.PNG);
+    background-size: cover;
+    width: 1350px;
+    height: 650px;
+    
+}
+#App-form{
+    margin-top: 100px;
+    margin-left: 500px;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid white;
+    width: 300px;
+    height: 420px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.app-form{
+    font-family: cursive;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.reg{
+    color: white;
+    margin-top: 30px;
+    border-bottom:2px solid #fff;
+    border-radius: 30px;
+}
+
+.reg label {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;    
+}
+
+.reg input {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.rem-me{
+    margin-top:20px;
+    color: white;
+    font-size:13px;
+}
+.check{
+    border: none;
+    outline: none;
+}
+.Register{
+    width: 200px;
+    border-radius:10px;
+    height: 30px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.1s ease;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.Register:hover{
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+.Go{
+    color: white;
+    font-size: small;
+    text-align: center;
+    margin-top: 20px;
+}
+#Log-gen{
+    background-image:
+    linear-gradient(rgba(6, 17, 172, 0.6), rgba(0,0,0,0.6)),
+    url(Capture-5.PNG);
+    width: 1350px;
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+}
+.Login{
+    margin-top: 150px;
+    margin-left: 500px;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid white;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 30px;
+    text-align: center;
+}
+.logtex{
+    font-family: cursive;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.Log1{
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius:30px;
+    margin-top: 30px;
+}
+.Log1 label{
+    font-size: 16px;
+    margin-top: 30px;
+    color: white;
+}
+.Log1 input{
+    background: transparent;
+    border: 0px;
+    outline: 0px;
+}
+#ContactUs{
+    display: flex;
+    gap: 100px;
+    align-content: center;
+    justify-content: center;
+}
+.text1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: blue;
+    font-size: 100px;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+.text11{
+    margin-top: -110px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+.text2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200px;
+    margin-top: 30px;
+    text-align: left;
+}
+.text3{
+    font-weight: normal;
+    margin-top: -10px;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contacts{
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0px;
+}
