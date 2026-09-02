@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Moobiq Food</title>
+    <meta name="description" content="Photo Gallery | Moobiq Food - Explore our farms, facilities, products, and community impact through our visual stories.">
+    <meta name="keywords" content="Moobiq Food, Gallery, Photos, Farms, Products, Community, Agriculture, Nigeria, Africa">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-logo">
+            <h1>MOOBIQ <span>FOOD</span></h1>
+            <p>Growing Better Food. Nourishing Lives.</p>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-seedling"></i>
+            <h2>MOOBIQ FOOD</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="agribusiness.html">Agribusiness</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h4>OUR GALLERY</h4>
+            <h1>Visual Stories of Impact</h1>
+            <p>
+                Explore our journey through images showcasing our farms,
+                processing facilities, products, and community initiatives.
+            </p>
+        </div>
+    </section>
+
+    <!-- GALLERY FILTER -->
+    <section class="gallery-section">
+        <div class="section-header">
+            <h2>Photo Gallery</h2>
+            <p>Browse through our collection of images from our operations and impact</p>
+        </div>
+        
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="farms">Farms</button>
+            <button class="filter-btn" data-filter="processing">Processing</button>
+            <button class="filter-btn" data-filter="products">Products</button>
+            <button class="filter-btn" data-filter="community">Community</button>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="farms">
+                <img src="images/Farmers.jpg" alt="Farm Operations">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="farms">
+                <img src="images/Sustainable%20Farming.jpg" alt="Crop Production">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="processing">
+                <img src="images/Food%20Processing%20Facility%20Opens.jpg" alt="Food Processing">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="processing">
+                <img src="images/Safe%20Packaging.jpg" alt="Packaging Facility">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="products">
+                <img src="images/Fresh%20Products.jpg" alt="Rice Products">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="products">
+                <img src="images/premium%20%20quality.jpg" alt="Grain Products">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="community">
+                <img src="images/Supporting%20Local%20Farmers.jpg" alt="Farmer Training">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="community">
+                <img src="images/Trusted%20Partnership.jpg" alt="Community Support">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Be Part of Our Story</h2>
+        <p>
+            Join us in our mission to transform agriculture and nourish lives
+            across Africa.
+        </p>
+        <a href="contact.html" class="btn-primary">Contact Us</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Moobiq Food</h3>
+                <p>
+                    Growing Better Food.
+                    Nourishing Lives.
+                    Building Prosperity.
+                </p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Gallery</h3>
+                <ul>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="news.html">Latest News</a></li>
+                </ul>
+            </div>
+<div>
+                <h3>Contact</h3>
+                <p>📍 Abuja, Nigeria</p>
+                <p>📞 +234 907 851 3719</p>
+                <p>✉ info@moobiqfood.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © <span class="year"></span> Moobiq Food. All Rights Reserved.
+        </div>
+    </footer>
+
+<!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/2349078513719" class="float whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="float top" aria-label="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

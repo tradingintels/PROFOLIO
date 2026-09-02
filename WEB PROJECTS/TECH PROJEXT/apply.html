@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Apply Online - Mobiq Tech Academy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Apply online to Mobiq Tech Academy. Complete the application form and begin your tech career.">
+    <meta name="keywords" content="Mobiq Tech Academy, Apply Online, Admissions, ICT Training, Lagos">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Prevent dark mode flash -->
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+
+<body id="top">
+
+<!-- Navigation Bar -->
+    <nav class="navbar">
+    <div class="logo"><a href="index.html"><span aria-hidden="true">🎓</span> Mobiq Tech Academy</a></div>
+    <ul class="nav-links">
+        <li><a href="index.html"><span aria-hidden="true">🏠</span> Home</a></li>
+        <li><a href="about.html"><span aria-hidden="true">ℹ️</span> About</a></li>
+        <li><a href="program.html"><span aria-hidden="true">📚</span> Programs</a></li>
+        <li><a href="faculties.html"><span aria-hidden="true">👥</span> Faculties</a></li>
+        <li><a href="contact.html"><span aria-hidden="true">📞</span> Contact</a></li>
+        <li><a href="admission.html"><span aria-hidden="true">📝</span> Admissions</a></li>
+        <li><a href="apply.html" class="active" aria-current="page"><span aria-hidden="true">✍️</span> Apply</a></li>
+        <li><a href="downloads.html"><span aria-hidden="true">📥</span> Downloads</a></li>
+    </ul>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode"><span aria-hidden="true">🌙</span></button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero apply-hero">
+        <div class="hero-content">
+    <span class="eyebrow"><span aria-hidden="true">📝</span> Application Portal</span>
+            <h1>Start Your Tech Journey Today</h1>
+            <p>Join Mobiq Tech Academy and transform your future with cutting-edge ICT training. Complete your application in
+                just a few minutes.</p>
+            <div class="hero-actions">
+                <a href="#application-form" class="btn btn-primary">Begin Application</a>
+                <a href="program.html" class="btn btn-secondary">View Programs</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Apply Online Content -->
+    <section class="section apply-section" id="application-form">
+        <div class="apply-grid">
+            <!-- Application Form -->
+            <div class="application-wrapper">
+                <form id="applicationForm" action="#" method="post" enctype="multipart/form-data" class="application-form">
+                    <fieldset class="form-step active" data-step="1">
+                        <legend><span aria-hidden="true">👤</span> Personal Information</legend>
+        <div class="form-row">
+            <label class="form-group">
+                <span class="emoji-label" aria-hidden="true">👤</span>
+                <span class="form-label">Full Name *</span>
+                <input type="text" name="full_name" placeholder="Enter your full name" required>
+            </label>
+            <label class="form-group">
+                <span class="emoji-label" aria-hidden="true">✉️</span>
+                <span class="form-label">Email Address *</span>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </label>
+        </div>
+        <div class="form-row">
+            <label class="form-group">
+                <span class="emoji-label" aria-hidden="true">📞</span>
+                <span class="form-label">Phone Number *</span>
+                <input type="tel" name="phone" placeholder="Enter your phone number" required>
+            </label>
+            <label class="form-group">
+                <span class="emoji-label" aria-hidden="true">🎂</span>
+                <span class="form-label">Date of Birth</span>
+                <input type="date" name="dob">
+            </label>
+        </div>
+        <label class="form-group full-width">
+            <span class="emoji-label" aria-hidden="true">🏠</span>
+            <span class="form-label">Residential Address</span>
+            <input type="text" name="address" placeholder="Enter your address">
+        </label>
+                    </fieldset>
+
+                    <fieldset class="form-step" data-step="2">
+                        <legend><span aria-hidden="true">📚</span> Programme Selection</legend>
+                        <div class="form-row">
+                            <label class="form-group">
+                                <span class="emoji-label" aria-hidden="true">📚</span>
+                                <span class="form-label">Programme Type *</span>
+                                <select name="programme" required>
+                                    <option value="">--Select Programme--</option>
+                                    <option value="certificate">Certificate Course</option>
+                                    <option value="diploma">Diploma Programme</option>
+                                </select>
+                            </label>
+                            <label class="form-group">
+                                <span class="emoji-label" aria-hidden="true">📚</span>
+                                <span class="form-label">Course *</span>
+                                <select name="course" required>
+                                    <option value="">--Select Course--</option>
+                                    <option value="software">Software Development</option>
+                                    <option value="engineering">Computer Engineering</option>
+                                    <option value="cybersecurity">Cybersecurity</option>
+                                    <option value="datascience">Data Science</option>
+                                    <option value="ai">Artificial Intelligence</option>
+                                    <option value="cloud">Cloud Computing</option>
+                                    <option value="mobile">Mobile App Development</option>
+                                    <option value="networking">Computer Networking</option>
+                                    <option value="graphics">Graphics Design</option>
+                                    <option value="marketing">Digital Marketing</option>
+                                    <option value="web">Web Design</option>
+                                    <option value="office">Microsoft Office Suite</option>
+                                    <option value="appreciation">Computer Appreciation</option>
+                                </select>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-step" data-step="3">
+                        <legend><span aria-hidden="true">📄</span> Document Upload</legend>
+                        <div class="form-row">
+                            <label class="form-group">
+                                <span class="emoji-label" aria-hidden="true">🖼️</span>
+                                <span class="form-label">Passport Photograph *</span>
+                                <input type="file" name="passport_photo" accept=".pdf,image/*" required>
+                                <span class="file-hint">PDF, JPG, PNG, or GIF format (max 5MB)</span>
+                            </label>
+                            <label class="form-group">
+                                <span class="emoji-label" aria-hidden="true">📎</span>
+                                <span class="form-label">Academic Certificate / Result</span>
+                                <input type="file" name="academic_certificate" accept=".pdf,.jpg,.jpeg,.png">
+                                <span class="file-hint">Optional - PDF, JPG, or PNG format</span>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label class="form-group">
+                                <span class="emoji-label" aria-hidden="true">🆔</span>
+                                <span class="form-label">ID Type *</span>
+                                <select name="id_type" required>
+                                    <option value="">--Select ID Type--</option>
+                                    <option value="passport">Passport</option>
+                                    <option value="national_id">National ID</option>
+                                    <option value="drivers_license">Driver's License</option>
+                                    <option value="voters_card">Voter's Card</option>
+                                </select>
+                            </label>
+                            <label class="form-group">
+                                <span class="emoji-label" aria-hidden="true">📤</span>
+                                <span class="form-label">ID Document Upload *</span>
+                                <input type="file" name="id_upload" accept=".pdf,.jpg,.jpeg,.png" required>
+                                <span class="file-hint">PDF, JPG, or PNG format (max 5MB)</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-step" data-step="4">
+                        <legend><span aria-hidden="true">✅</span> Declaration & Review</legend>
+                        <div class="review-summary">
+                            <h3>Application Summary</h3>
+                            <ul id="summaryList">
+                                <li>Review your information before submitting</li>
+                            </ul>
+                        </div>
+                        <label class="declaration-checkbox">
+                            <input type="checkbox" required>
+                            <span>I certify that the information provided is true and correct to the best of my knowledge.
+                                I understand that false information may result in disqualification.</span>
+                        </label>
+                    </fieldset>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-secondary nav-btn prev-btn" style="display: none;"><span aria-hidden="true">←</span> Previous
+                        </button>
+                        <button type="button" class="btn btn-primary nav-btn next-btn">Next Step <span aria-hidden="true">→</span></button>
+                        <button type="submit" class="btn btn-primary submit-btn" style="display: none;">Submit
+                            Application</button>
+                    </div>
+                </form>
+                <div id="uploadStatus" class="upload-status hidden" role="status" aria-live="polite">
+                    <div id="uploadMessage">Ready to submit your application.</div>
+                    <div class="progress-bar hidden" id="uploadProgress"><i style="width:0%"></i></div>
+                </div>
+            </div>
+
+            <!-- Review Panel (Right Side) -->
+            <div class="review-panel">
+                <div class="review-summary">
+                    <h3>Personal Information</h3>
+                    <ul id="reviewPersonal">
+                        <li><strong>Full Name:</strong> <span id="reviewName" class="review-value"></span></li>
+                        <li><strong>Email:</strong> <span id="reviewEmail" class="review-value"></span></li>
+                        <li><strong>Phone:</strong> <span id="reviewPhone" class="review-value"></span></li>
+                        <li><strong>Date of Birth:</strong> <span id="reviewDob" class="review-value"></span></li>
+                        <li><strong>Address:</strong> <span id="reviewAddress" class="review-value"></span></li>
+                    </ul>
+                </div>
+                <div class="review-summary">
+                    <h3>Program Selection</h3>
+                    <ul id="reviewProgram">
+                        <li><strong>Programme Type:</strong> <span id="reviewProgramme" class="review-value"></span></li>
+                        <li><strong>Course:</strong> <span id="reviewCourse" class="review-value"></span></li>
+                    </ul>
+                </div>
+<div class="review-summary">
+                            <h3>Uploaded Documents</h3>
+                            <div id="reviewDocuments" style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1rem;">
+                                <div>
+                                    <p><strong>Passport Photograph:</strong></p>
+                                    <img id="photoPreview" src="" alt="Passport photo preview" style="max-width: 150px; max-height: 150px; border-radius: 8px; display: none; border: 2px solid rgba(15, 23, 42, 0.1);">
+                                    <div id="photoPdfPreview" style="display: none; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #64748b;">
+                                        <span aria-hidden="true">📄</span>
+                                        <span id="photoPdfName"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p><strong>ID Document:</strong></p>
+                                    <img id="idPreview" src="" alt="ID document preview" style="max-width: 150px; max-height: 150px; border-radius: 8px; display: none; border: 2px solid rgba(15, 23, 42, 0.1);">
+                                    <div id="idPdfPreview" style="display: none; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #64748b;">
+                                        <span aria-hidden="true">📄</span>
+                                        <span id="idPdfName"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+    <div class="footer-links">
+        <h3>Quick links</h3>
+        <ul>
+            <li><a href="index.html"><span aria-hidden="true">🏠</span> Home</a></li>
+            <li><a href="about.html"><span aria-hidden="true">ℹ️</span> About</a></li>
+            <li><a href="program.html"><span aria-hidden="true">📚</span> Programs</a></li>
+            <li><a href="admission.html"><span aria-hidden="true">📝</span> Admissions</a></li>
+            <li><a href="apply.html"><span aria-hidden="true">✍️</span> Apply</a></li>
+        </ul>
+    </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Ikorodu Study Center, Lagos</p>
+                <p>Phone: +234 907 851 3719</p>
+                <p>Email: info@mobiqtech.edu.ng</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow us</h3>
+                <a href="#">Facebook</a> |
+                <a href="#">Instagram</a> |
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mobiq Tech Academy. All Rights Reserved.</p>
+            <a href="#top" class="back-to-top">Back to Top</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
