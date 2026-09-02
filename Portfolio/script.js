@@ -38,15 +38,7 @@ if (!prefersReducedMotion && !isTouchDevice) {
     });
 
     if (heroCard) {
-        heroCard.addEventListener('pointermove', event => {
-            const bounds = heroCard.getBoundingClientRect();
-            const rotateY = (event.clientX - bounds.left - bounds.width / 2) / 28;
-            const rotateX = -(event.clientY - bounds.top - bounds.height / 2) / 28;
-            heroCard.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        });
-        heroCard.addEventListener('pointerleave', () => {
-            heroCard.style.transform = 'perspective(900px) rotateX(0) rotateY(0)';
-        });
+        // Tilt/rotation disabled to keep portrait static on hover/mousemove
     }
 
     document.querySelectorAll('.project-card').forEach(card => {
